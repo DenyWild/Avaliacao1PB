@@ -30,7 +30,8 @@ public class Funcionarios {
 	public static void imprimirFuncionariosInfo(Funcionarios[] funcionarios,
 			BonificacaoOuDesconto[] bonificacaooudesconto) {
 		for (int posicao = 0; posicao < funcionarios.length; posicao++) {
-			System.out.println("Funcionário: " + funcionarios[posicao].getNome().toString());
+			
+			System.out.println("Funcionário: "+ funcionarios[posicao].getNome().toString());
 			System.out.printf(" %s %.2f %s", "Salário: ", funcionarios[posicao].getSalario(), "\n");
 			if (bonificacaooudesconto[posicao].getBonificacao() > 0) {
 				System.out.printf(" %s %.2f %s", "Bonus: ", bonificacaooudesconto[posicao].getBonificacao(), "\n");

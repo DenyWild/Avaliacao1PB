@@ -12,10 +12,10 @@ public class questao7Main {
 
 		perguntasERespostas[] quiz = new perguntasERespostas[5];
 
-		int certo = 0;
-		int errado = 0;
+		int acertos = 0;
+		int erros = 0;
 		String nomeUsuario;
-		String aux;
+		String suaResposta;
 
 		quiz[0] = new perguntasERespostas("Qual o tempo maximo em minutos que uma daily pode ter?", "15");
 		quiz[1] = new perguntasERespostas("Quem representa o cliente dentro da equipe e é o dono da product backlog? "
@@ -34,22 +34,22 @@ public class questao7Main {
 		for (int i = 0; i < quiz.length; i++) {
 
 			System.out.println(quiz[i].getPerguntas());
-			aux = input.nextLine();
+			suaResposta = input.nextLine();
 
-			if (aux.equalsIgnoreCase(quiz[i].getRespostas())) {
+			if (suaResposta.equalsIgnoreCase(quiz[i].getRespostas())) {
 				System.out.println("Você Acertou!!!");
-				certo++;
+				acertos++;
 			} else {
 				System.out.println("Você Errou!!!");
-				errado++;
+				erros++;
 			}
 
 		}
 
 		System.out.println("PARABENS! VOCÊ CHEGOU AO FINAL DO QUIZ!");
 		System.out.println("Usuário: " + nomeUsuario);
-		System.out.println("Respostas Certas: " + certo);
-		System.out.println("Respostas Erradas: " + errado);
+		System.out.println("Respostas certas: " + acertos+ "");
+		System.out.println("Respostas erradas: " + erros);
 
 	}
 
