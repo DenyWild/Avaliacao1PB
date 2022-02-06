@@ -30,12 +30,12 @@ public class questao7Main {
 		System.out.println("BEM VINDO, " + nomeUsuario.toUpperCase() + "! ESTE É UM QUIZ DE 5 PERGUNTAS SOBRE SCRUM");
 		System.out.println("AO FINAL SERÁ INFORMADO SEUS ACERTOS E ERROS");
 		System.out.println("-----------------------------------------------------------");
-		for (int i = 0; i < quiz.length; i++) {
+		for (int posicao = 0; posicao < quiz.length; posicao++) {
 
-			System.out.println(quiz[i].getPerguntas());
+			System.out.println(quiz[posicao].getPerguntas());
 			suaResposta = input.nextLine();
 
-			if (suaResposta.equalsIgnoreCase(quiz[i].getRespostas())) {
+			if (suaResposta.equalsIgnoreCase(quiz[posicao].getRespostas())) {
 				System.out.println("Você Acertou!!! \n");
 				acertos++;
 			} else {

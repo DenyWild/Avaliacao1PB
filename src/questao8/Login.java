@@ -29,14 +29,14 @@ public class Login {
 
 	public static void validacaoDoLogin(String aux1, String aux2, Login[] comp, int hora) {
 
-		for (int i = 0; i <= comp.length; i++) {
+		for (int posicao = 0; posicao <= comp.length; posicao++) {
 
-			if (i == 3) {
+			if (posicao == 3) {
 				System.out.println("Usuário e/ou senha incorretos.");
-				i--;
+				posicao--;
 				break;
 			}
-			if (aux1.equalsIgnoreCase(comp[i].getUsuario()) && aux2.equalsIgnoreCase(comp[i].getSenha())) {
+			if (aux1.equalsIgnoreCase(comp[posicao].getUsuario()) && aux2.equalsIgnoreCase(comp[posicao].getSenha())) {
 				horaDoDia(hora);
 				break;
 			}
