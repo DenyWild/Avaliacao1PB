@@ -27,7 +27,7 @@ public class questao7Main {
 		System.out.println("-----------------------------------------------------------");
 		System.out.println("Digite o nome de usuário");
 		nomeUsuario = input.nextLine();
-		System.out.println("BEM VINDO, " + nomeUsuario.toUpperCase() + "! ESTE É UM QUIZ DE 5 PERGUNTAS SOBRE SCRUM");
+		System.out.println("BEM VINDO, " + nomeUsuario.toUpperCase() + "! ESTE É UM QUIZ DE PERGUNTAS SOBRE SCRUM");
 		System.out.println("AO FINAL SERÁ INFORMADO SEUS ACERTOS E ERROS");
 		System.out.println("-----------------------------------------------------------");
 		for (int posicao = 0; posicao < quiz.length; posicao++) {
@@ -47,7 +47,7 @@ public class questao7Main {
 
 		System.out.println("PARABÉNS! VOCÊ CHEGOU AO FINAL DO QUIZ!");
 		System.out.println("Usuário: " + nomeUsuario);
-		System.out.println("Respostas certas: " + acertos + "");
+		System.out.println("Respostas certas: " + acertos);
 		System.out.println("Respostas erradas: " + erros);
 
 	}
