@@ -17,22 +17,22 @@ public class questao9Main {
 		System.out.println("Por favor, informe a quantidade de funcionários a serem cadastrados: ");
 		numerodefuncionarios = input.nextInt();
 
-		funcionarios[] func = new funcionarios[numerodefuncionarios];
-		bonificacaoOuDesconto[] bondesc = new bonificacaoOuDesconto[numerodefuncionarios];
+		Funcionarios[] funcionarios = new Funcionarios[numerodefuncionarios];
+		BonificacaoOuDesconto[] bonificacaooudesconto = new BonificacaoOuDesconto[numerodefuncionarios];
 
-		for (int i = 0; i < numerodefuncionarios; i++) {
+		for (int posicao = 0; posicao < numerodefuncionarios; posicao++) {
 			System.out.println("Por favor, nos informe seu nome: ");
 			nome = entrada.nextLine();
 
 			System.out.println("Por favor, nos informe seu salario: ");
 			salario = input.nextDouble();
-			func[i] = new funcionarios(nome, salario);
+			funcionarios[posicao] = new Funcionarios(nome, salario);
 
 		}
-		//CHAMA A FUNÇÃO PARA FAZER OS CALCULOS
-		bonificacaoOuDesconto.bonificaOuDesconta(func, bondesc);
-		//CHAMA A FUNÇÃO PARA IMPRIMIR TODOS OS FUNCIONARIOS COM OS DEVIDOS VALORES
-		funcionarios.imprimirFuncionarios(func, bondesc);
+
+		BonificacaoOuDesconto.bonificaOuDesconta(funcionarios, bonificacaooudesconto);
+
+		Funcionarios.imprimirFuncionariosInfo(funcionarios, bonificacaooudesconto);
 	}
 
 }

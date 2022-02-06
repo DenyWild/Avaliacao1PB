@@ -1,11 +1,11 @@
 package questao9;
 
-public class funcionarios {
+public class Funcionarios {
 
 	private String nome;
 	private double salario;
 
-	public funcionarios(String nome, double salario) {
+	public Funcionarios(String nome, double salario) {
 		super();
 		this.nome = nome;
 		this.salario = salario;
@@ -27,17 +27,20 @@ public class funcionarios {
 		this.salario = salario;
 	}
 
-	public static void imprimirFuncionarios(funcionarios[] func, bonificacaoOuDesconto[] bondesc) {
-		for (int i = 0; i < func.length; i++) {
-			System.out.println("Funcionário: " + func[i].getNome().toString());
-			System.out.println("Salário: " + func[i].getSalario());
-			if (bondesc[i].getBonificacao() > 0) {
-				System.out.println("Bonus: " + bondesc[i].getBonificacao());
-				System.out.println("Salario Líquido: " + bondesc[i].getSalarioLiquido() + "\n");
+	public static void imprimirFuncionariosInfo(Funcionarios[] funcionarios,
+			BonificacaoOuDesconto[] bonificacaooudesconto) {
+		for (int posicao = 0; posicao < funcionarios.length; posicao++) {
+			System.out.println("Funcionário: " + funcionarios[posicao].getNome().toString());
+			System.out.printf(" %s %.2f %s", "Salário: ", funcionarios[posicao].getSalario(), "\n");
+			if (bonificacaooudesconto[posicao].getBonificacao() > 0) {
+				System.out.printf(" %s %.2f %s", "Bonus: ", bonificacaooudesconto[posicao].getBonificacao(), "\n");
+				System.out.printf(" %s %.2f %s %s", "Salario Líquido: ",
+						bonificacaooudesconto[posicao].getSalarioLiquido(), "\n", "\n");
 
-			} else if (bondesc[i].getBonificacao() <= 0) {
-				System.out.println("Desconto: " + bondesc[i].getDesconto());
-				System.out.println("Salario Líquido: " + bondesc[i].getSalarioLiquido() + "\n");
+			} else if (bonificacaooudesconto[posicao].getBonificacao() <= 0) {
+				System.out.printf(" %s %.2f %s", "Desconto: ", bonificacaooudesconto[posicao].getDesconto(), "\n");
+				System.out.printf(" %s %.2f %s %s", "Salario Líquido: ",
+						bonificacaooudesconto[posicao].getSalarioLiquido(), "\n", "\n");
 
 			}
 		}
