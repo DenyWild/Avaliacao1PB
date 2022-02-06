@@ -9,26 +9,26 @@ public class questao8Main {
 
 		Scanner input = new Scanner(System.in);
 
-		Calendar cal = Calendar.getInstance();
-		int hora = cal.get(Calendar.HOUR_OF_DAY);
-
+		Calendar calendario = Calendar.getInstance();
+		int horaAtual = calendario.get(Calendar.HOUR_OF_DAY);
+  
 		Login[] login = new Login[3];
 
 //VARIAVEIS PARA RECEBER O USUARIO E A SENHA
-		String loginUsuario;
-		String loginSenha;
+		String campoUsuario;
+		String campoSenha;
 //ARRAYS CONTENDO O CADASTRO
-		login[0] = new Login("joana", "1234");
-		login[1] = new Login("compasso", "estagio");
+		login[0] = new Login("tranquilidade", "1234");
+		login[1] = new Login("vamo", "nacalma");
 		login[2] = new Login("denys", "4321");
 
 		System.out.println("Por favor, nos informe seu usuario e senha para login");
 		System.out.println("Usuario: ");
-		loginUsuario = input.nextLine();
+		campoUsuario = input.nextLine();
 		System.out.println("Senha: ");
-		loginSenha = input.nextLine();
+		campoSenha = input.nextLine();
 
-		Login.validacaoDoLogin(loginUsuario, loginSenha, login, hora);
+		Login.validacaoDoLogin(campoUsuario, campoSenha, login, horaAtual);
 
 	}
 

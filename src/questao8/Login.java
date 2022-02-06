@@ -27,35 +27,33 @@ public class Login {
 		this.senha = senha;
 	}
 
-	public static void validacaoDoLogin(String aux1, String aux2, Login[] comp, int hora) {
+	public static void validacaoDoLogin(String campoUsuario, String campoSenha, Login[] login, int horaAtual) {
 
-		for (int posicao = 0; posicao <= comp.length; posicao++) {
+		for (int posicao = 0; posicao <= login.length; posicao++) {
 
-			if (posicao == 3) {
+			if (posicao == login.length) {
 				System.out.println("Usuário e/ou senha incorretos.");
 				posicao--;
 				break;
 			}
-			if (aux1.equalsIgnoreCase(comp[posicao].getUsuario()) && aux2.equalsIgnoreCase(comp[posicao].getSenha())) {
-				horaDoDia(hora);
+			if (campoUsuario.equalsIgnoreCase(login[posicao].getUsuario())
+					&& campoSenha.equalsIgnoreCase(login[posicao].getSenha())) {
+				horaDoDia(horaAtual);
 				break;
 			}
 
 		}
 	}
 
-	public static void horaDoDia(int hora) {
+	public static void horaDoDia(int horaAtual) {
 
-		if (hora >= 6 && hora < 12) {
+		if (horaAtual >= 6 && horaAtual < 12) {
 			System.out.println("Bom dia, você se logou ao nosso sistema.");
-		}
-		if (hora >= 12 && hora < 18) {
+		} else if (horaAtual >= 12 && horaAtual < 18) {
 			System.out.println("Boa tarde, você se logou ao nosso sistema.");
-		}
-		if (hora >= 18 && hora < 0) {
+		} else if (horaAtual >= 18 && horaAtual < 24) {
 			System.out.println("Boa noite, você se logou ao nosso sistema.");
-		}
-		if (hora >= 0 && hora < 6) {
+		} else if (horaAtual >= 0 && horaAtual < 6) {
 			System.out.println("Boa Madrugada, você se logou ao nosso sistema.");
 		}
 
