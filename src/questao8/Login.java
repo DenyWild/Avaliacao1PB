@@ -1,8 +1,5 @@
 package questao8;
 
-import java.lang.Integer;
-import java.util.Calendar;
-
 public class Login {
 
 	private String usuario;
@@ -30,7 +27,7 @@ public class Login {
 		this.senha = senha;
 	}
 
-	public static void validacaoLogin(String aux1, String aux2, Login[] comp, int hora) {
+	public static void validacaoDoLogin(String aux1, String aux2, Login[] comp, int hora) {
 
 		for (int i = 0; i <= comp.length; i++) {
 

@@ -22,13 +22,13 @@ public class questao8Main {
 		login[1] = new Login("compasso", "estagio");
 		login[2] = new Login("denys", "4321");
 
-		System.out.println("Por favor nos informe seu usuario e senha para login");
+		System.out.println("Por favor, nos informe seu usuario e senha para login");
 		System.out.println("Usuario: ");
 		loginUsuario = input.nextLine();
 		System.out.println("Senha: ");
 		loginSenha = input.nextLine();
 
-		Login.validacaoLogin(loginUsuario, loginSenha, login, hora);
+		Login.validacaoDoLogin(loginUsuario, loginSenha, login, hora);
 
 	}
 
